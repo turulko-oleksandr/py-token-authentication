@@ -138,7 +138,7 @@ class OrderViewSet(mixins.ListModelMixin,
     serializer_class = OrderSerializer
     pagination_class = OrderPagination
     authentication_classes = (TokenAuthentication,)
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAdminOrIfAuthenticatedReadOnly,)
 
     def get_queryset(self):
         return Order.objects.filter(user=self.request.user)
