@@ -1,7 +1,4 @@
-# write your code here
-from django.contrib.auth.views import LoginView
 from django.urls import path
-from rest_framework.authtoken import views
 
 from user.views import CreateUserView, LoginUserView, ManageUserView
 

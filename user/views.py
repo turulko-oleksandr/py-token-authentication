@@ -1,12 +1,9 @@
-# write your code here
-from rest_framework import viewsets, generics
+from rest_framework import generics
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.settings import api_settings
-from rest_framework.views import APIView
 
-from user.models import User
 from user.serializers import UserSerializer
 
 
